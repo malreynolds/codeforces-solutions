@@ -18,8 +18,8 @@ bool cmp(PointVector a, PointVector b) {
 
 int main()
 {
-    int n, a, b, x, y;
-    long double bestAns, currentAns;
+    int n, a, b;
+    long double bestAns, currentAns, x, y;
     cin >> n;
     vector<PointVector> vectors(n);
     for (int i = 0; i < n; i++) {
@@ -27,6 +27,7 @@ int main()
         cin >> x >> y;
         vectors[i].angle = atan2(y, x);
     }
+    
     sort(vectors.begin(), vectors.end(), cmp);
     
     bestAns = (2 * PI - abs(vectors[0].angle) - abs(vectors[n - 1].angle));

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-/* static void my_rotate(int start, int middle, int end, string &s) {
+/* inline void my_rotate(int start, int middle, int end, string &s) {
     if (middle == end) return;
     int next = middle;
     while (start < next) {
